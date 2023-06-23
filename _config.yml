@@ -1,10 +1,10 @@
 permalink: /:year:month:day/:title
-url: #Your url here
+url: /
 baseurl: /project
 
 # variables
-name: Your Site Name
-description: Your description here
+name: decently safe defi
+description: Web3 security wargames based on bug leads
 google_verification: null
 
 

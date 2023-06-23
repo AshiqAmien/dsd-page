@@ -2,7 +2,9 @@
 layout: default
 ---
 <ul>
-	{% for post in site.posts %}
-	<li><a href="{{  post.url }}" title="{{ post.title }}"><img src="/assets/img/file.ico" title="{{ post.title }}" />{{ post.title }}</a></li>
+	{% assign tags = site.tags %}
+	{% for tag in tags %}
+	<li><a href="/tag/{{ tag | first | slugify }}/" title="{{ tag[0] | replace:'-', ' ' }}"><img src="/assets/img/directoryclosed.png" />{{ tag[0] | replace:'-', ' ' }}</a></li>
 	{% endfor %}
 </ul>
+

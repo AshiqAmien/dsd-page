@@ -1,11 +1,8 @@
-tag1:
-  name: tag1
+instructions:
+  name: instructions
 
-tag2:
-  name: tag2
+challenges:
+  name: challenges
 
-tag3:
-  name: tag3
-
-tag4:
-  name: tag4
+solutions:
+  name: solutions

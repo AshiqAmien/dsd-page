@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="/assets/css/atom-one-light.css">
+    
+        <title>instructions.txt</title>
+		<link rel="stylesheet" type="text/css" href="/assets/css/002.css">
+    
+	<link rel="stylesheet" href="/assets/css/font-awesome.min.css">
+	<link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
+	<script src="/assets/js/highlight.pack.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="default_title">
+			<img src="/assets/img/mycomputer.png" />
+			
+				<h1>decently safe defi</h1>
+			
+		</div>
+		<ul class="topbar">
+	<a href="/me"><li><u>A</u>bout</li></a>
+	<a href="https://twitter.com/AshiqAmien" target="_blank"><li><u>T</u>witter</li></a>
+	<a href="https://ashiq.co.za/tabs/research/" target="_blank"><li><u>B</u>log</li></a>
+</ul>
+		<div class="tag_list">
+			<ul id="tag-list">
+				<li><a href="/" ><img src="/assets/img/disk.png" />(C:)</a>
+			<ul>
+				
+				
+				<li><a href="/tag/solutions/" title="solutions"><img src="/assets/img/folder.ico" />solutions</a></li>
+				
+				<li><a href="/tag/instructions/" title="instructions"><img src="/assets/img/folder.ico" />instructions</a></li>
+				
+				<li><a href="/tag/challenges/" title="challenges"><img src="/assets/img/folder.ico" />challenges</a></li>
+				
+			</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="post_list">
+			
+				<ul>
+					
+				</ul>
+			
+		</div>
+		<div class="post_total">
+			
+				<div class="left">8 object(s)</div>
+			
+			<div class="right">&nbsp;</div>
+		</div>
+	</div>
+	
+        <div class="content">
+			<div class="post_title">
+				<img src="/assets/img/file.png" />
+				<h1>instructions.txt</h1>
+				<a href="/"><div class="btn"><span class="fa fa-times"></span></div></a>
+				<div class="btn btn_max"><span class="fa fa-window-maximize"></span></div>
+				<div class="btn"><span class="fa fa-window-minimize"></span></div>
+			</div>
+			<ul class="topbar">
+				<li>June 23, 2023</li>
+			</ul>
+			<div class="post_content">
+        		<h1 id="decently-safe-defi-️">Decently Safe DeFi ⚒️</h1>
+
+<p><a href="https://twitter.com/AshiqAmien"><img src="https://img.shields.io/twitter/follow/ngp2311?label=Follow%20me%20%40AshiqAmien&amp;style=social" alt="Twitter Follow" /></a></p>
+
+<h3 id="acknowledgement">Acknowledgement</h3>
+<p><em>Big thanks to <a href="https://twitter.com/tinchoabbate">Tincho</a> who created the <a href="https://github.com/tinchoabbate/damn-vulnerable-defi/tree/v2.0.0">first version of this game</a> and to all the fellows behind the <a href="https://github.com/gakonst/foundry/graphs/contributors">Foundry Framework</a>. Further thanks to <a href="https://github.com/nicolasgarcia214">Nicolás García</a>, who ported Damn Vulnerable Defi to foundry.</em></p>
+
+<p>Decently Safe DeFi is an unofficial fork of <a href="https://damnvulnerabledefi.xyz">Damn Vulnerable DeFi</a>, a wargame to learn offensive security of DeFi smart contracts.</p>
+
+<p>Decently Safe Defi is different from Damn Vulnerable Defi since its challenges are based on dead end bug leads of real protocols. The challenges are created by subtly removing the last line of defence, or reversing a minor misconfiguration of a protocol to produce a critical result.</p>
+
+<h2 id="how-to-play-️">How To Play 🕹️</h2>
+
+<ol>
+  <li><strong>Install Foundry</strong></li>
+</ol>
+
+<p>First run the command below to get foundryup, the Foundry toolchain installer:</p>
+
+<pre><code class="language-bash">curl -L https://foundry.paradigm.xyz | bash
+</code></pre>
+
+<p>Then, in a new terminal session or after reloading your PATH, run it to get the latest forge and cast binaries:</p>
+
+<pre><code class="language-console">foundryup
+</code></pre>
+
+<ol>
+  <li><strong>Clone This Repo and install dependencies</strong>
+    <pre><code>git clone https://github.com/nicolasgarcia214/damn-vulnerable-defi-foundry.git
+cd damn-vulnerable-defi-foundry
+forge install
+</code></pre>
+  </li>
+  <li><strong>Code your solutions in the provided <code>[NAME_OF_THE_LEVEL].t.sol</code> files (inside each level’s folder in the test folder)</strong></li>
+  <li><strong>Run your exploit for a challenge</strong>
+    <pre><code>forge test --match-contract [ChallengeName] -vvvv
+</code></pre>
+    <p>or</p>
+    <pre><code>./run.sh [LEVEL_FOLDER_NAME]
+./run.sh [CHALLENGE_NUMBER]
+./run.sh [4_FIRST_LETTER_OF_NAME] 
+</code></pre>
+    <p>If the challenge is executed successfully, you’ve passed!🙌🙌</p>
+  </li>
+</ol>
+
+<h3 id="tips-and-tricks-">Tips and tricks ✨</h3>
+<ul>
+  <li>In all challenges you must use the account called attacker. In Forge, you can use the <a href="https://github.com/gakonst/foundry/tree/master/forge#cheat-codes">cheat code</a> <code>prank</code> or <code>startPrank</code>.</li>
+  <li>To code the solutions, you may need to refer to the <a href="https://book.getfoundry.sh/">Foundry Book</a>.</li>
+  <li>In some cases, you may need to code and deploy custom smart contracts.</li>
+</ul>
+
+<h3 id="preinstalled-dependencies">Preinstalled dependencies</h3>
+
+<p><code>ds-test</code> for testing, <code>forge-std</code> for better cheatcode UX, and <code>openzeppelin-contracts</code> for contract implementations.</p>
+
+			</div>
+		</div>
+    
+	<script src="/assets/js/001.js"></script>
+	<script src="/assets/js/002.js"></script>
+	<div class="footer">
+		<p>Created by <a href="http://github.com/h01000110" target="_blank">h01000110 (hi)</a> | Code licensed under <a href="https://github.com/h01000110/h01000110.github.io/blob/master/LICENSE" target="_blank">MIT License</a></p>
+	</div>
+</body>
+</html>
