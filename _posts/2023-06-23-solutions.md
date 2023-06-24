@@ -4,6 +4,7 @@ title: "solutions.txt"
 tags: solutions
 ---
 
-## Solutions
+## Solutions... coming soon!
+<br/>
 
-... coming soon!
+![...coming soon!](../assets/img/solns.gif)

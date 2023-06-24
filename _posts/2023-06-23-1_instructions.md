@@ -6,6 +6,7 @@ tags: instructions
 
 # Decently Safe DeFi ⚒️
 
+Decently Safe DeFi is released with 4 challenges based on [Abracadabra.money's](https://abracadabra.money/) CauldronV4 and DegenBox contracts.
 
 [![Twitter Follow](https://img.shields.io/twitter/follow/ngp2311?label=Follow%20me%20%40AshiqAmien&style=social)](https://twitter.com/AshiqAmien)
 
