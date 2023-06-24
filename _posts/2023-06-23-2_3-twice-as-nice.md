@@ -4,8 +4,8 @@ title: "twice-as-nice.txt"
 tags: challenges
 ---
 
-# Challenge #2 - Twice as nice
-
+## Challenge #2 - Twice as nice
+<br/>
 I just found out Cauldron V4 is vulnerable! I've revoked access to Degenbox and decided to transfer my WETH to Sushi's BentoBox while they figure this mess out. 
 
 Objective: Drain the Alice's BentoBox WETH balance. 

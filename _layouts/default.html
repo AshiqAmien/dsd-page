@@ -41,29 +41,44 @@
 				</li>
 			</ul>
 		</div>
-		<div class="post_list">
-			{% unless page.date%}
+		<div class="post_list">			
+			{% unless page.date %}
 				{% if page.title == 'me' or page.title == '404...' %}
-					<ul>
-						{% assign tags = site.tags %}
-						{% for tag in tags %}
-						<li><a href="/tag/{{ tag | first | slugify }}/" title="{{ tag[0] | replace:'-', ' ' }}"><img src="/assets/img/directoryclosed.png" />{{ tag[0] | replace:'-', ' ' }}</a></li>
-						{% endfor %}
-					</ul>				
+				<ul>
+					{% assign tags = site.tags %}
+					{% for tag in tags %}
+					<li><a href="/tag/{{ tag | first | slugify }}/" title="{{ tag[0] | replace:'-', ' ' }}"><img src="/assets/img/directoryclosed.png" />{{ tag[0] | replace:'-', ' ' }}</a></li>
+					{% endfor %}
+				</ul>				
 				{% else %}
 					{{ content }}
 				{% endif %}
 			{% else %}
-				<ul>
-					{% for post in site.tags[page.tag] %}
-					<li><a href="{{  post.url }}" title="{{ post.title }}"><img src="/assets/img/file.ico" title="{{ post.title }}" />{{ post.title }}</a></li>
-					{% endfor %}
-				</ul>
+			<ul>								
+										
+				{% if page.title == 'instructions.txt' %}
+					<script>console.log('{{ page.title }}')</script>
+					<li><a href="{{ page.url }}" title="{{ page.title }}"><img src="/assets/img/file.ico" title="{{ page.title }}" />{{ page.title }}</a></li>												
+				{% elsif page.title == 'free2call.txt' or page.title == 'twice-as-nice.txt' or page.title == 'stir-it-up.txt' or page.title == 'honeypot.txt' %}
+					<li><a href="../20230623/2_4-2free2call" title="free2call.txt"><img src="/assets/img/file.ico" title="{{ free2call.txt }}" /> free2call.txt </a></li>													
+					<li><a href="../20230623/2_3-twice-as-nice" title="twice-as-nice.txt"><img src="/assets/img/file.ico" title="{{ twice-as-nice.txt }}" /> twice-as-nice.txt </a></li>												
+					<li><a href="../20230623/2_2-stir-it-up" title="stir-it-up.txt"><img src="/assets/img/file.ico" title="{{ stir-it-up.txt }}" /> stir-it-up.txt </a></li>
+					<li><a href="../20230623/2_1-honeypot" title="honeypot.txt"><img src="/assets/img/file.ico" title="{{ honeypot.txt }}" /> honeypot.txt </a></li>
+				{% elsif page.title == 'solutions.txt' %}
+					<li><a href="../20230623/solutions" title="solutions.txt"><img src="/assets/img/file.ico" title="{{ solutions.txt }}" /> solutions.txt </a></li>
+				{% endif %}
+			
+					
+							
+			</ul>
 			{% endunless %}
+			
+				
+			
 		</div>
 		<div class="post_total">
 			{% if page.tag %}
-				<div class="left">{{ site.tags[page.tag] | size }} object(s)</div>
+				<div class="left">{{ site.tags[page.tag] | size }} object(s)</div>											
 			{% else %}
 				<div class="left">{{ site.posts | size }} object(s)</div>
 			{% endif %}
