@@ -25,7 +25,7 @@ Before you get started with the challenges, you'll need to do some setup:
  
     ```bash 
     $ git clone "https://github.com/AshiqAmien/decently-safe-defi"
-    $ cd damn-vulnerable-defi-foundry
+    $ cd decently-safe-defi
     $ forge install
     ```
 
