@@ -1,10 +1,10 @@
 permalink: /:year:month:day/:title
-url: /
-baseurl: /project
+url: https://decentlysafedefi.xyz
+baseurl: /
 
 # variables
 name: decently safe defi
-description: Web3 security wargames based on bug leads
+description: Web3 security wargames based on near misses
 google_verification: null
 
 
