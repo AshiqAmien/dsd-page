@@ -24,7 +24,7 @@ function numbers () {
 			var row = document.createElement("tr");
 			var col = document.createElement("th");
 			var colc = document.createElement("th");
-			col.innerText = num + 1;
+			/* col.innerText = num + 1;*/
 			colc.innerText = select_f[line];
 			row.appendChild(col);
 			row.appendChild(colc);
@@ -40,7 +40,10 @@ function numbers () {
 			colc.style.border = "0";
 			col.style.padding = "3px";
 			colc.style.padding = "3px";
-			col.style.borderRight = "2px solid #777777";
+			colc.style.borderRight = "px solid #777777";
+			colc.style.borderLeft = "1px solid #777777";
+			colc.style.borderTop = "0px solid #777777";
+			colc.style.borderBottom = "0px solid #777777";
 
 			// END OF SECTION
 

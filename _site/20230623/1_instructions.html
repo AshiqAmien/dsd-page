@@ -81,65 +81,55 @@
 				<li>June 23, 2023</li>
 			</ul>
 			<div class="post_content">
-        		<h1 id="decently-safe-defi-️">Decently Safe DeFi ⚒️</h1>
+        		<h2 id="instructions">Instructions</h2>
 
-<p>Decently Safe DeFi is released with 4 challenges based on <a href="https://abracadabra.money/">Abracadabra.money’s</a> CauldronV4 and DegenBox contracts.</p>
+<p>Before you get started with the challenges, you’ll need to do some setup:</p>
 
-<p><a href="https://twitter.com/AshiqAmien"><img src="https://img.shields.io/twitter/follow/ngp2311?label=Follow%20me%20%40AshiqAmien&amp;style=social" alt="Twitter Follow" /></a></p>
-
-<h3 id="acknowledgement">Acknowledgement</h3>
-<p><em>Big thanks to <a href="https://twitter.com/tinchoabbate">Tincho</a> who created the <a href="https://github.com/tinchoabbate/damn-vulnerable-defi/tree/v2.0.0">first version of this game</a> and to all the fellows behind the <a href="https://github.com/gakonst/foundry/graphs/contributors">Foundry Framework</a>. Further thanks to <a href="https://github.com/nicolasgarcia214">Nicolás García</a>, who ported Damn Vulnerable Defi to foundry.</em></p>
-
-<p>Decently Safe DeFi is an unofficial fork of <a href="https://damnvulnerabledefi.xyz">Damn Vulnerable DeFi</a>, a wargame to learn offensive security of DeFi smart contracts.</p>
-
-<p>Decently Safe Defi is different from Damn Vulnerable Defi since its challenges are based on dead end bug leads of real protocols. The challenges are created by subtly removing the last line of defence, or reversing a minor misconfiguration of a protocol to produce a critical result.</p>
-
-<h2 id="how-to-play-️">How To Play 🕹️</h2>
-
-<ol>
-  <li><strong>Install Foundry</strong></li>
-</ol>
-
-<p>First run the command below to get foundryup, the Foundry toolchain installer:</p>
-
-<pre><code class="language-bash">curl -L https://foundry.paradigm.xyz | bash
-</code></pre>
-
-<p>Then, in a new terminal session or after reloading your PATH, run it to get the latest forge and cast binaries:</p>
-
-<pre><code class="language-console">foundryup
-</code></pre>
-
-<ol>
-  <li><strong>Clone This Repo and install dependencies</strong>
-    <pre><code>git clone https://github.com/nicolasgarcia214/damn-vulnerable-defi-foundry.git
-cd damn-vulnerable-defi-foundry
-forge install
-</code></pre>
-  </li>
-  <li><strong>Code your solutions in the provided <code>[NAME_OF_THE_LEVEL].t.sol</code> files (inside each level’s folder in the test folder)</strong></li>
-  <li><strong>Run your exploit for a challenge</strong>
-    <pre><code>forge test --match-contract [ChallengeName] -vvvv
-</code></pre>
-    <p>or</p>
-    <pre><code>./run.sh [LEVEL_FOLDER_NAME]
-./run.sh [CHALLENGE_NUMBER]
-./run.sh [4_FIRST_LETTER_OF_NAME] 
-</code></pre>
-    <p>If the challenge is executed successfully, you’ve passed!🙌🙌</p>
-  </li>
-</ol>
-
-<h3 id="tips-and-tricks-">Tips and tricks ✨</h3>
 <ul>
-  <li>In all challenges you must use the account called attacker. In Forge, you can use the <a href="https://github.com/gakonst/foundry/tree/master/forge#cheat-codes">cheat code</a> <code>prank</code> or <code>startPrank</code>.</li>
-  <li>To code the solutions, you may need to refer to the <a href="https://book.getfoundry.sh/">Foundry Book</a>.</li>
-  <li>In some cases, you may need to code and deploy custom smart contracts.</li>
+  <li>
+    <p>Install Foundry</p>
+
+    <p>  First run the command below to get foundryup, the Foundry toolchain installer:</p>
+    <pre><code class="language-bash">  $ curl -L "https://foundry.paradigm.xyz" | bash
+</code></pre>
+    <p>  Then, in a new terminal session or after reloading your PATH, run it to get the latest forge and cast binaries:</p>
+    <pre><code class="language-bash">  $ foundryup
+</code></pre>
+  </li>
+  <li>
+    <p>Clone the repo and install the dependencies</p>
+
+    <pre><code class="language-bash">  $ git clone "https://github.com/AshiqAmien/decently-safe-defi"
+  $ cd damn-vulnerable-defi-foundry
+  $ forge install
+</code></pre>
+  </li>
+  <li>
+    <p>Code your solutions in the provided <code>[NAME_OF_THE_LEVEL].t.sol</code> files (inside each level’s folder in the test folder)</p>
+  </li>
+  <li>
+    <p>Run your exploit for a challenge</p>
+
+    <pre><code class="language-bash">  forge test --match-contract [ChallengeName] -vvvv
+</code></pre>
+    <p> or</p>
+    <pre><code class="language-bash">  ./run.sh [CHALLENGE_NUMBER]
+</code></pre>
+    <p>If the challenge is executed successfully, you’ve passed!</p>
+  </li>
 </ul>
 
-<h3 id="preinstalled-dependencies">Preinstalled dependencies</h3>
+<h2 id="tips-rules-and-extras">Tips, rules and extras</h2>
+<p>Before you begin, there’s some things you should know:</p>
 
-<p><code>ds-test</code> for testing, <code>forge-std</code> for better cheatcode UX, and <code>openzeppelin-contracts</code> for contract implementations.</p>
+<p>• In all challenges you must use the account called attacker. In Forge, you can use the <a href="https://github.com/gakonst/foundry/tree/master/forge#cheat-codes">cheat code</a> <em>prank()</em> or <em>startPrank()</em>. Avoid impersonating anyone else, or using any private keys that might be around on the contract!</p>
+
+<p>• In some cases, you may need to code and deploy custom smart contracts.</p>
+
+<p>• Testing with the verbosity flags (i.e. using <em>-vvvv</em>) may help with debugging any issues you run into.</p>
+
+<p>• Since the challenges are protocol based, it’s recommended to diff the given contracts to the instances on mainnet for possible clues on solving the challenge.</p>
+
 
 			</div>
 		</div>
