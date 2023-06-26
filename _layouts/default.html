@@ -78,7 +78,11 @@
 		</div>
 		<div class="post_total">
 			{% if page.tag %}
-				<div class="left">{{ site.tags[page.tag] | size }} object(s)</div>											
+				<div class="left">{{ site.tags[page.tag] | size }} object(s)</div>														
+			{% elsif page.title == 'free2call.txt' or page.title == 'twice-as-nice.txt' or page.title == 'stir-it-up.txt' or page.title == 'honeypot.txt' %}
+				<div class="left">4 object(s)</div>
+			{% elsif page.title == 'solutions.txt' or page.title == 'instructions.txt'%}
+				<div class="left">1 object(s)</div>
 			{% else %}
 				<div class="left">{{ site.tags | size }} object(s)</div>
 			{% endif %}
